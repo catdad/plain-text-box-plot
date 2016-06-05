@@ -1,0 +1,25 @@
+{
+  "name": "plain-text-box-plot",
+  "version": "0.0.1",
+  "description": "Creates a box plot in plain text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint index.js test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catdad/plain-text-box-plot.git"
+  },
+  "author": "Kiril Vatev <vatev.1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catdad/plain-text-box-plot/issues"
+  },
+  "homepage": "https://github.com/catdad/plain-text-box-plot#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.11.1",
+    "mocha": "^2.5.3"
+  }
+}
