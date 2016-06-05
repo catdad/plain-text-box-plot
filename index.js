@@ -26,6 +26,18 @@ function times(num, func) {
     }
 }
 
+function getWidth(options) {
+    if (options === undefined) {
+        return 75;
+    }
+    
+    if (options === Number(options)) {
+        return options;
+    }
+    
+    return getWidth(options.width);
+}
+
 /* This is what a box plot will look like
  *
  *       +----+----+
@@ -33,8 +45,8 @@ function times(num, func) {
  *       +----+----+
  */
 
-function createBoxPlot(stats, width) {
-    var width = width || 75;
+function createBoxPlot(stats, options) {
+    var width = getWidth(options);
     var ticks = width - 5;
 
     var percents = lengthPercents(stats);
