@@ -45,14 +45,18 @@ function lengthPercents(opts) {
 
 function createBoxPlot(stats, options) {
     var width = getWidth(options);
-    var ticks = width - 5;
+    
+    // we are adding 5 extra characters (2 at the ends and 1
+    // between each section), so we will subtract that from
+    // the total width here
+    var chars = width - 5;
 
     var percents = lengthPercents(stats);
 
-    var l1 = percents.l1 * ticks;
-    var l2 = percents.l2 * ticks;
-    var l3 = percents.l3 * ticks;
-    var l4 = percents.l4 * ticks;
+    var l1 = percents.l1 * chars;
+    var l2 = percents.l2 * chars;
+    var l3 = percents.l3 * chars;
+    var l4 = percents.l4 * chars;
 
     var str1 = '';
     var str2 = '';
