@@ -1,21 +1,3 @@
-function lengthPercents(opts) {
-    var totalLength = opts.max - opts.min;
-
-    var p1 = (opts.q1 - opts.min) / totalLength;
-    var p2 = (opts.q2 - opts.min) / totalLength;
-    var p3 = (opts.q3 - opts.min) / totalLength;
-    var p4 = 1;
-
-    var vals = {
-        l1: p1,
-        l2: p2 - p1,
-        l3: p3 - p2,
-        l4: p4 - p3
-    };
-
-    return vals;
-}
-
 function round(num) {
     return Math.floor(num);
 }
@@ -36,6 +18,22 @@ function getWidth(options) {
     }
     
     return getWidth(options.width);
+}
+
+function lengthPercents(opts) {
+    var totalLength = opts.max - opts.min;
+
+    var p1 = (opts.q1 - opts.min) / totalLength;
+    var p2 = (opts.q2 - opts.min) / totalLength;
+    var p3 = (opts.q3 - opts.min) / totalLength;
+    var p4 = 1;
+
+    return {
+        l1: p1,
+        l2: p2 - p1,
+        l3: p3 - p2,
+        l4: p4 - p3
+    };
 }
 
 /* This is what a box plot will look like
