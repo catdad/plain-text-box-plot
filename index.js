@@ -1,3 +1,10 @@
+/* This is what a box plot will look like
+ *
+ *       +----+----+
+ *  |----|    |    |----|
+ *       +----+----+
+ */
+
 function round(num) {
     return Math.floor(num);
 }
@@ -36,13 +43,6 @@ function lengthPercents(opts) {
     };
 }
 
-/* This is what a box plot will look like
- *
- *       +----+----+
- *  |----|    |    |----|
- *       +----+----+
- */
-
 function createBoxPlot(stats, options) {
     var width = getWidth(options);
     
@@ -58,9 +58,8 @@ function createBoxPlot(stats, options) {
     var l3 = percents.l3 * chars;
     var l4 = percents.l4 * chars;
 
-    var str1 = '';
-    var str2 = '';
-    var str3 = '';
+    var top = '';
+    var mid = '';
 
     addEnd();
 
@@ -81,30 +80,26 @@ function createBoxPlot(stats, options) {
     addEnd();
 
     function addBreak() {
-        str1 += '+';
-        str2 += '|';
-        str3 += '+';
+        top += '+';
+        mid += '|';
     }
 
     function addBox() {
-        str1 += '-';
-        str2 += ' ';
-        str3 += '-';
+        top += '-';
+        mid += ' ';
     }
 
     function addWisker() {
-        str1 += ' ';
-        str2 += '-';
-        str3 += ' ';
+        top += ' ';
+        mid += '-';
     }
 
     function addEnd() {
-        str1 += ' ';
-        str2 += '|';
-        str3 += ' ';
+        top += ' ';
+        mid += '|';
     }
     
-    return [str1, str2, str3].join('\n');
+    return [top, mid, top].join('\n');
 }
 
 module.exports = createBoxPlot;
