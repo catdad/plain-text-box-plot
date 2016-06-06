@@ -4,6 +4,7 @@
 [![Code Climate][5]][6]
 [![Downloads][7]][8]
 [![Version][9]][8]
+[![ISC License][10]][11]
 
 [1]: https://travis-ci.org/catdad/plain-text-box-plot.svg?branch=master
 [2]: https://travis-ci.org/catdad/plain-text-box-plot
@@ -14,6 +15,9 @@
 [7]: https://img.shields.io/npm/dm/plain-text-box-plot.svg
 [8]: https://www.npmjs.com/package/plain-text-box-plot
 [9]: https://img.shields.io/npm/v/plain-text-box-plot.svg
+
+[10]: https://img.shields.io/npm/l/is-gzip-stream.svg
+[11]: http://opensource.org/licenses/ISC
 
 A small Node library that creates box plots in plain text. Great for outputting box plots from CLI tools.
 
@@ -71,3 +75,7 @@ var ptBox = require('plain-text-box-plot');
 var data = { ... };
 var boxplotString = ptBox(data, width);
 ```
+
+## License
+
+[ISC](http://opensource.org/licenses/ISC)
