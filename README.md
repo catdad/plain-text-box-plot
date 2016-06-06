@@ -26,7 +26,7 @@ Example output:
          +--------+--------+
 ```
 
-By default, the width of the output will be at most 75 characters. (Note: sometimes it can e 74, depending on the data.) You can also set this value with an optional second parameter:
+By default, the width of the output will be at most 75 characters. (Note: sometimes it can be 74, depending on the data.) You can also set this value with an optional second parameter:
 
 ```javascript
 var ptBox = require('plain-text-box-plot');
